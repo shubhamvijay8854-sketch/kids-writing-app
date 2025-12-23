@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kidwrite-v1';
+const CACHE_NAME = 'kidwrite-v2';
 const ASSETS = [
     './',
     './index.html',
