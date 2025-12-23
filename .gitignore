@@ -1,0 +1,21 @@
+# KidWrite & Type - .gitignore
+
+# Dependencies
+node_modules/
+.DS_Store
+
+# Capacitor
+android/
+ios/
+
+# Build
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.system_generated/
+*.log

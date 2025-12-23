@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KidWrite & Type</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Coming+Soon&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js');
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Main Dashboard -->
+        <div id="dashboard" class="screen active">
+            <header>
+                <h1>Magic Writing Tablet</h1>
+                <p>Choose an activity!</p>
+            </header>
+            <div class="menu-grid">
+                <button id="btn-writing" class="menu-card writing-card">
+                    <div class="card-icon">✏️</div>
+                    <h2>Writing Mode</h2>
+                    <span>Use your finger or stylus</span>
+                </button>
+                <button id="btn-typing" class="menu-card typing-card">
+                    <div class="card-icon">⌨️</div>
+                    <h2>Typing Mode</h2>
+                    <span>Type with the keyboard</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Writing Screen -->
+        <div id="writing-screen" class="screen">
+            <nav class="top-nav">
+                <button class="back-btn">🏠 Home</button>
+                <h2>Writing Practice</h2>
+                <button id="clear-canvas" class="action-btn">🗑️ Clear</button>
+            </nav>
+            <div class="canvas-container">
+                <canvas id="writing-canvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Typing Screen -->
+        <div id="typing-screen" class="screen">
+            <nav class="top-nav">
+                <button class="back-btn">🏠 Home</button>
+                <h2>Typing Practice</h2>
+                <div></div>
+            </nav>
+            <div class="typing-container">
+                <div id="typing-display" class="typing-display">
+                    <span class="placeholder">Type something here...</span>
+                </div>
+                <input type="text" id="hidden-input" autocomplete="off" autofocus>
+                <div class="typing-info">Tap anywhere to start typing</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
