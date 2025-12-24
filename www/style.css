@@ -40,6 +40,8 @@ h3 {
     width: 100%;
     height: 100%;
     position: relative;
+    padding-bottom: 40px;
+    /* Space for footer */
 }
 
 /* Screens */
@@ -206,6 +208,25 @@ h3 {
     margin-top: 20px;
     color: #888;
     font-size: 1.2rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    pointer-events: none;
+}
+
+footer strong {
+    color: var(--primary-color);
 }
 
 @media (max-width: 600px) {
