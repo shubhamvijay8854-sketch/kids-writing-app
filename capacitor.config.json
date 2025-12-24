@@ -1,5 +1,9 @@
 {
   "appId": "com.kidwrite.app",
   "appName": "KidWrite",
-  "webDir": "."
+  "webDir": "www",
+  "server": {
+    "url": "https://shubhamvijay8854-sketch.github.io/kids-writing-app/",
+    "cleartext": true
+  }
 }
